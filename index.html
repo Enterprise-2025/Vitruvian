@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimagrimento Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎯 Peso & Benessere</h1>
+  </header>
+
+  <main>
+    <!-- Dashboard -->
+    <section class="card">
+      <h2>Dashboard</h2>
+      <div class="progress">
+        <p>Peso attuale: <strong id="peso-attuale">--</strong> kg</p>
+        <p>Obiettivo: <strong id="peso-target">69</strong> kg</p>
+        <div class="progress-bar">
+          <div id="progress-fill" class="progress-fill"></div>
+        </div>
+        <small id="progress-text">Inserisci le tue pesate per iniziare</small>
+      </div>
+    </section>
+
+    <!-- Lista spesa -->
+    <section class="card">
+      <h2>🛒 Lista Spesa</h2>
+      <ul id="lista-spesa" class="list"></ul>
+      <button onclick="resetSpesa()">🔄 Reset lista</button>
+    </section>
+
+    <!-- Allenamento -->
+    <section class="card">
+      <h2>🏋️ Allenamento</h2>
+      <p id="orario-allenamento">Oggi alle 18:30</p>
+      <ul id="lista-allenamento" class="list"></ul>
+      <button onclick="segnaAllenamento()">✅ Segna come fatto</button>
+    </section>
+
+    <!-- Pesate -->
+    <section class="card">
+      <h2>⚖️ Pesate</h2>
+      <p>Ultima pesata: <strong id="ultima-pesata">--</strong></p>
+      <input type="number" id="input-peso" placeholder="Inserisci nuovo peso">
+      <button onclick="aggiungiPeso()">➕ Aggiungi</button>
+      <ul id="storico-pesi" class="list"></ul>
+    </section>
+  </main>
+
+  <!-- Bottom nav -->
+  <nav class="bottom-nav">
+    <a href="#">🏠</a>
+    <a href="#">🛒</a>
+    <a href="#">⚖️</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
